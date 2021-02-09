@@ -41,7 +41,7 @@ def webhook():
             origin.pull()
             return 'Updated PythonAnywhere successfully', 200
         else:
-            return 'Wrong event type', 400
+            return 'Wrong event type.', 400
     else:
         return 'Unauthorized secret value.', 401
 
