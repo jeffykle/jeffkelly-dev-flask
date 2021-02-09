@@ -28,14 +28,14 @@ def not_found(err):
     return render_template("404.html", err=err)
 
 
-@app.route('/update_server', methods=['POST'])
+@app.route('/pushchanges', methods=['POST'])
 def webhook():
     x_hub_signature = request.headers.get('X-Hub-Signature')
     w_secret = os.getenv('POST_MERGE_SECRET')
 
     if is_valid_signature(x_hub_signature, request.data, w_secret):
         if request.method == 'POST':
-            repo = git.Repo('jeffkelly-dev-flask')
+            repo = git.Repo('pushchanges')
             origin = repo.remotes.origin
             origin.pull()
             return 'Updated PythonAnywhere successfully', 200
