@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OOPSIE DAISY</title>
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static', filename='bootswatch-darkly.css') }}" rel="stylesheet">
+  </head>
+  <body>
+<section>
+  <div class="jumbotron text-center mt-2">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1>U WOT M8?</h1>
+              <p><img src="{{ url_for('static', filename='images/404.jpg') }}" width="350" height="484" alt=""/></p>
+              <p>It's a 404 page.</p>
+
+              <p> You caused an error: </p><p class="text-warning">{{ err }}</p>
+</div>
+          </div>
+        </div>
+      </div>
+    </section>
+<footer class="text-center">
+  <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Copyright © no... nevermind.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+  </body>
+</html>
