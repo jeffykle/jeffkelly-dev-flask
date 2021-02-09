@@ -43,7 +43,7 @@ def webhook():
         else:
             return 'Wrong event type', 400
     else:
-        return 'Not an authorized secret', 401
+        return 'Unauthorized secret value.', 401
 
 
 if __name__ == '__main__':
