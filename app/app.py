@@ -38,7 +38,7 @@ def webhook():
             repo = git.Repo('pushchanges')
             origin = repo.remotes.origin
             origin.pull()
-            return 'Updated PythonAnywhere successfully', 200
+            return 'Updated PythonAnywhere successfully.', 200
         else:
             return 'Wrong event type.', 400
     else:
