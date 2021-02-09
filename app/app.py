@@ -36,7 +36,7 @@ def webhook():
 
     if is_valid_signature(x_hub_signature, request.data, w_secret):
         if request.method == 'POST':
-            repo = git.Repo(repo_url)
+            repo = git.Repo('../jeffkelly-dev-flask')
             origin = repo.remotes.origin
             origin.pull()
             return 'Updated PythonAnywhere successfully', 200
